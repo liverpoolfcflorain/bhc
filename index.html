@@ -428,6 +428,17 @@
             font-size: 1.05rem;
             font-weight: 600;
             margin: 0;
+            flex: 1;
+        }
+
+        .rec-year {
+            font-size: .78rem;
+            letter-spacing: .02em;
+            color: var(--ink-soft);
+            flex: 0 0 auto;
+            font-weight: 500;
+            font-variant-numeric: tabular-nums;
+            margin-left: auto;
         }
 
         .empty-state {
@@ -916,7 +927,8 @@
                     a.href = '#bill-' + encodeURIComponent(r.id);
                     a.innerHTML =
                         '<span class="rec-no">No. ' + pad3(r.no) + '</span>' +
-                        '<span class="record-title">' + escapeHtml(r.title) + '</span>';
+                        '<span class="record-title">' + escapeHtml(r.title) + '</span>' +
+                        '<span class="rec-year">' + escapeHtml(r.year) + '</span>';
                     frag.appendChild(a);
                 });
 
